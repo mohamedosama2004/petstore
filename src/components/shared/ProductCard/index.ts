@@ -1,1 +1,1 @@
-export { ProductCard, type ProductCardProps } from "./ProductCard";
+export { ProductCard, type ProductCardData, type ProductCardProps } from "./ProductCard";

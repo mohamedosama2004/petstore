@@ -5,3 +5,4 @@ export { PromotionalBanner, type PromotionalBannerProps } from "./components/Pro
 export { WhyChooseUs, type WhyChooseUsProps } from "./components/WhyChooseUs";
 export { Testimonials, type TestimonialsProps } from "./components/Testimonials";
 export { NewsletterSection, type NewsletterSectionProps } from "./components/NewsletterSection";
+export { HomeAnimations, type HomeAnimationsProps } from "./components/HomeAnimations";

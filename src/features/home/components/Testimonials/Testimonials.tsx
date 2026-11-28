@@ -5,7 +5,7 @@ export interface TestimonialsProps {
 export function Testimonials({ className }: TestimonialsProps) {
   return (
     <section className={className} aria-label="Testimonials">
-      {/* Testimonials */}
+      {/* Testimonials — to be implemented when real customer reviews are available */}
     </section>
   );
 }

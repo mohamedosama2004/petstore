@@ -1,30 +1,28 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+  variable: "--font-ibm-plex-sans-arabic",
+  subsets: ["arabic", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Pet store",
-  description: "online petstore for animal supplies",
+  title: {
+    default: "New — مستلزمات الحيوانات الأليفة",
+    template: "%s | New",
+  },
+  description:
+    "متجر نيو للمستلزمات اليومية للقطط والكلاب في المملكة العربية السعودية.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="ar" dir="rtl" className={`${ibmPlexArabic.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col bg-cream text-charcoal">{children}</body>
     </html>
   );
 }
