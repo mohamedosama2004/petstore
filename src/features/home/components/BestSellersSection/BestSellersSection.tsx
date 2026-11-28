@@ -48,14 +48,14 @@ export function BestSellersSection({ className }: BestSellersSectionProps) {
           className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:gap-5 lg:grid-cols-3"
         >
           {featuredProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              data-product-card=""
-              product={product}
-              imageFallback={<ProductArtwork kind={product.artwork} />}
-              imageSizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 25vw"
-              action={<DemoAddToCartButton productName={product.name} />}
-            />
+            <div key={product.id} data-product-item="" className="h-full">
+              <ProductCard
+                product={product}
+                imageFallback={<ProductArtwork kind={product.artwork} />}
+                imageSizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 25vw"
+                action={<DemoAddToCartButton productName={product.name} />}
+              />
+            </div>
           ))}
         </div>
 

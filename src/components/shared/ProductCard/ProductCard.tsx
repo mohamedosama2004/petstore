@@ -46,6 +46,7 @@ export function ProductCard({
       <Link
         href={href}
         aria-label={product.name}
+        data-product-media=""
         className="relative block overflow-hidden bg-sage/15"
       >
         <ImageSlot

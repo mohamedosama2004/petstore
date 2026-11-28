@@ -55,13 +55,13 @@ export function CategorySection({ className }: CategorySectionProps) {
             <li
               key={category.id}
               data-category-card=""
-              className={cn("last:col-span-2 sm:last:col-span-1", cardTones[index % cardTones.length])}
+              className={cn("rounded-3xl last:col-span-2 sm:last:col-span-1", cardTones[index % cardTones.length])}
             >
               <Link
                 href={category.href}
                 className="group flex h-full flex-col rounded-3xl border border-sage/25 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-sage/50 hover:shadow-xl hover:shadow-forest/10 sm:p-5"
               >
-                <div className="grid h-24 w-24 place-items-center rounded-2xl bg-white/70 p-3 shadow-sm sm:h-28 sm:w-28">
+                <div data-category-art="" className="grid h-24 w-24 place-items-center rounded-2xl bg-white/70 p-3 shadow-sm sm:h-28 sm:w-28">
                   <ImageSlot
                     alt={`رسم توضيحي لفئة ${category.name}`}
                     src={category.imageSrc}

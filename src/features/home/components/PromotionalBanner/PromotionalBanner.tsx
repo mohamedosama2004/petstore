@@ -18,8 +18,8 @@ export function PromotionalBanner({ className, imageSrc }: PromotionalBannerProp
           className="relative overflow-hidden rounded-[2.5rem] bg-forest px-6 py-14 sm:px-10 sm:py-16 lg:flex lg:items-center lg:gap-12 lg:px-14 lg:py-20"
         >
           <div className="pointer-events-none absolute inset-0">
-            <div className="absolute -start-24 -top-24 h-72 w-72 rounded-full bg-sage/10" />
-            <div className="absolute -end-20 -bottom-20 h-72 w-72 rounded-full bg-orange/10" />
+            <div data-promo-orb="" className="absolute -start-24 -top-24 h-72 w-72 rounded-full bg-sage/10" />
+            <div data-promo-orb="" className="absolute -end-20 -bottom-20 h-72 w-72 rounded-full bg-orange/10" />
             <div className="absolute inset-y-8 end-1/2 hidden w-px bg-cream/10 lg:block" />
           </div>
 

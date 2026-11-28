@@ -44,8 +44,8 @@ export function WhyChooseUs({ className }: WhyChooseUsProps) {
             const Icon = benefitIcons[benefit.icon];
 
             return (
+              <div key={benefit.id} data-benefit-item="" className="h-full">
               <article
-                key={benefit.id}
                 data-benefit-card=""
                 className="group flex h-full flex-col rounded-3xl border border-sage/25 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-sage/50 hover:shadow-lg hover:shadow-forest/10 sm:p-6"
               >
@@ -57,6 +57,7 @@ export function WhyChooseUs({ className }: WhyChooseUsProps) {
                   {benefit.description}
                 </p>
               </article>
+              </div>
             );
           })}
         </div>

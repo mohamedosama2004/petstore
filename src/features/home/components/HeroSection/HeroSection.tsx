@@ -12,18 +12,19 @@ export interface HeroSectionProps {
 export function HeroSection({ className, imageSrc }: HeroSectionProps) {
   return (
     <section
+      data-hero-section=""
       className={cn("relative isolate overflow-hidden bg-cream", className)}
       aria-labelledby="hero-title"
     >
       <div className="pointer-events-none absolute inset-0 -z-0">
-        <div className="absolute -start-24 top-10 h-72 w-72 rounded-[45%] bg-sage/20" />
-        <div className="absolute -end-20 bottom-0 h-80 w-80 rounded-full bg-orange/10" />
+        <div data-hero-blob="" className="absolute -start-24 top-10 h-72 w-72 rounded-[45%] bg-sage/20" />
+        <div data-hero-blob="" className="absolute -end-20 bottom-0 h-80 w-80 rounded-full bg-orange/10" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-sage/30" />
       </div>
 
       <Container className="relative z-10 grid items-center gap-12 py-14 sm:py-20 lg:min-h-[640px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:gap-10 lg:py-24">
         <div className="flex min-w-0 flex-col items-center text-center lg:items-start lg:text-start">
-          <span className="inline-flex items-center gap-2 rounded-full border border-sage/40 bg-white/70 px-3 py-1.5 text-xs font-semibold text-forest shadow-sm">
+          <span data-hero-badge="" className="inline-flex items-center gap-2 rounded-full border border-sage/40 bg-white/70 px-3 py-1.5 text-xs font-semibold text-forest shadow-sm">
             <PawIcon className="h-4 w-4 text-orange" />
             كل احتياجات أليفك في مكان واحد
           </span>
@@ -45,21 +46,23 @@ export function HeroSection({ className, imageSrc }: HeroSectionProps) {
           </p>
 
           <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center lg:mt-10">
+            <div data-hero-cta="" className="w-full sm:w-auto">
             <Link
-              data-hero-cta=""
               href={routes.store.shop}
-              className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-forest px-7 text-sm font-semibold text-cream shadow-lg shadow-forest/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest/95 hover:shadow-xl active:translate-y-0 active:scale-[0.98] sm:h-14 sm:px-9 sm:text-base"
+              className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-forest px-7 text-sm font-semibold text-cream shadow-lg shadow-forest/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest/95 hover:shadow-xl active:translate-y-0 active:scale-[0.98] sm:h-14 sm:px-9 sm:text-base"
             >
               تسوق الآن
               <ArrowLeftIcon className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
             </Link>
+            </div>
+            <div data-hero-cta="" className="w-full sm:w-auto">
             <Link
-              data-hero-cta=""
               href="#categories"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-forest/20 bg-white/60 px-7 text-sm font-semibold text-forest transition-all duration-300 hover:-translate-y-0.5 hover:border-forest/40 hover:bg-white active:translate-y-0 active:scale-[0.98] sm:h-14 sm:px-9 sm:text-base"
+              className="inline-flex h-12 w-full items-center justify-center rounded-full border border-forest/20 bg-white/60 px-7 text-sm font-semibold text-forest transition-all duration-300 hover:-translate-y-0.5 hover:border-forest/40 hover:bg-white active:translate-y-0 active:scale-[0.98] sm:h-14 sm:px-9 sm:text-base"
             >
               اكتشف منتجاتنا
             </Link>
+            </div>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-charcoal/55 lg:justify-start">
@@ -75,7 +78,7 @@ export function HeroSection({ className, imageSrc }: HeroSectionProps) {
         </div>
 
         <div data-hero-visual="" className="relative mx-auto w-full max-w-lg">
-          <div className="relative rounded-[2.5rem] border border-sage/40 bg-sage/20 p-3 shadow-[0_35px_70px_-45px_rgba(36,75,60,0.45)]">
+          <div data-hero-frame="" className="relative rounded-[2.5rem] border border-sage/40 bg-sage/20 p-3 shadow-[0_35px_70px_-45px_rgba(36,75,60,0.45)]">
             <ImageSlot
               alt="رسم توضيحي لقط وكلب معاً ضمن مستلزمات الحيوانات الأليفة"
               src={imageSrc}
